@@ -8,9 +8,14 @@ package dungeontester;
 import byui.cit260.dungeonTester.model.Actors;
 import byui.cit260.dungeonTester.model.Backpack;
 import byui.cit260.dungeonTester.model.Game;
+import byui.cit260.dungeonTester.model.Inventory;
 import byui.cit260.dungeonTester.model.Locations;
 import byui.cit260.dungeonTester.model.Map;
+import byui.cit260.dungeonTester.model.MonsterScene;
 import byui.cit260.dungeonTester.model.Player;
+import byui.cit260.dungeonTester.model.RegularScene;
+import byui.cit260.dungeonTester.model.StairScene;
+import byui.cit260.dungeonTester.model.TrapScene;
 
 /**
  *
@@ -73,6 +78,48 @@ public class DungeonTester {
         
         String locationsInfo = locations.toString();
         System.out.println(locationsInfo);
+        
+        Inventory inventory = new Inventory();
+        
+        inventory.setInventoryType("Sword");
+        inventory.setQuantity(24);
+        inventory.setKeyItems("Key of Unlocking");
+        inventory.setAttribute("Titanium");
+        
+        String InventoryInfo = inventory.toString();
+        System.out.println(InventoryInfo);
+        
+        TrapScene trapScene = new TrapScene();
+        
+        trapScene.setDescription("Push to front wall");
+        trapScene.setTrapType("Push Trap");
+        
+        String TrapSceneInfo = trapScene.toString();
+        System.out.println(TrapSceneInfo);
+        
+        StairScene stairScene = new StairScene();
+        
+        stairScene.setDescription("Climb to next floor");
+        stairScene.setGuardianType("Troll");
+        stairScene.setAttribute("Proceed");
+        
+        String StairSceneInfo = stairScene.toString();
+        System.out.println(StairSceneInfo);
+        
+        RegularScene regularScene = new RegularScene();
+        
+        regularScene.setDescription("Look around but nothing found");
+        
+        String RegularSceneInfo = regularScene.toString();
+        System.out.println(RegularSceneInfo);
+        
+        MonsterScene monsterScene = new MonsterScene();
+        
+        monsterScene.setDescription("Monster Engages in battle");
+        monsterScene.setEnemyType("Orc");
+        
+        String MonsterSceneInfo = monsterScene.toString();
+        System.out.println(MonsterSceneInfo);
     }
     
     
