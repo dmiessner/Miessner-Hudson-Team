@@ -25,8 +25,7 @@ public class CombatControl {
             return -1;
         }
         if (attackStat > enemyDefense) {
-            double damageRating = attackStat – enemyDefense;
-            double damageDealt = enemyHealth – damageRating;
+            double damageDealt = attackStat - enemyDefense;
             return damageDealt;
         } 
         
@@ -34,3 +33,4 @@ public class CombatControl {
             return 0;
         }
     }
+}
