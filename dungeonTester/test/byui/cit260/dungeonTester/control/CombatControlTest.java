@@ -185,4 +185,98 @@ public class CombatControlTest {
         assertEquals(expResult, result, -1.0);
 
     }
+
+    /**
+     * Test of enemyAttack method, of class CombatControl.
+     */
+    @Test
+    public void testEnemyAttack() {
+        // test case 1
+        System.out.println("enemyAttack");
+        System.out.println("\tTest Case #1");
+        double enemyAttack = 5.0;
+        double playerDefense = 10.0;
+        double playerHealth = 10.0;
+        CombatControl instance = new CombatControl();
+        double expResult = 0.0;
+        double result = instance.enemyAttack(enemyAttack, playerDefense, playerHealth);
+        assertEquals(expResult, result, 0.0);
+        
+        // test case 2
+        System.out.println("enemyAttack");
+        System.out.println("\tTest Case #2");
+        enemyAttack = 10.0;
+        playerDefense = 5.0;
+        playerHealth = 10.0;
+        instance = new CombatControl();
+        expResult = 5.0;
+        result = instance.enemyAttack(enemyAttack, playerDefense, playerHealth);
+        assertEquals(expResult, result, 5.0);
+        
+        // test case 3
+        System.out.println("enemyAttack");
+        System.out.println("\tTest Case #3");
+        enemyAttack = 100.0;
+        playerDefense = 5.0;
+        playerHealth = 10.0;
+        instance = new CombatControl();
+        expResult = -1.0;
+        result = instance.enemyAttack(enemyAttack, playerDefense, playerHealth);
+        assertEquals(expResult, result, -1.0);
+        
+        // test case 4
+        System.out.println("enemyAttack");
+        System.out.println("\tTest Case #4");
+        enemyAttack = 10.0;
+        playerDefense = 100.0;
+        playerHealth = 10.0;
+        instance = new CombatControl();
+        expResult = -1.0;
+        result = instance.enemyAttack(enemyAttack, playerDefense, playerHealth);
+        assertEquals(expResult, result, -1.0);
+        
+        // test case 5
+        System.out.println("enemyAttack");
+        System.out.println("\tTest Case #5");
+        enemyAttack = 0.0;
+        playerDefense = 10.0;
+        playerHealth = 10.0;
+        instance = new CombatControl();
+        expResult = -1.0;
+        result = instance.enemyAttack(enemyAttack, playerDefense, playerHealth);
+        assertEquals(expResult, result, -1.0);
+        
+        // test case 6
+        System.out.println("enemyAttack");
+        System.out.println("\tTest Case #6");
+        enemyAttack = 10.0;
+        playerDefense = 0.0;
+        playerHealth = 10.0;
+        instance = new CombatControl();
+        expResult = -1.0;
+        result = instance.enemyAttack(enemyAttack, playerDefense, playerHealth);
+        assertEquals(expResult, result, -1.0);
+        
+        // test case 7
+        System.out.println("enemyAttack");
+        System.out.println("\tTest Case #7");
+        enemyAttack = 10.0;
+        playerDefense = 5.0;
+        playerHealth = 100.0;
+        instance = new CombatControl();
+        expResult = -1.0;
+        result = instance.enemyAttack(enemyAttack, playerDefense, playerHealth);
+        assertEquals(expResult, result, -1.0);
+        
+        // test case 8
+        System.out.println("enemyAttack");
+        System.out.println("\tTest Case #8");
+        enemyAttack = 10.0;
+        playerDefense = 5.0;
+        playerHealth = 0.0;
+        instance = new CombatControl();
+        expResult = -1.0;
+        result = instance.enemyAttack(enemyAttack, playerDefense, playerHealth);
+        assertEquals(expResult, result, -1.0);
+    }
 }
