@@ -33,4 +33,26 @@ public class CombatControl {
             return 0;
         }
     }
+    
+    public double enemyAttack(double enemyAttack, double playerDefense, double playerHealth) {
+    
+        if (playerHealth <= 0 || playerHealth > 99) {
+        return -1;
+    }
+        if (playerDefense < 1 || playerDefense > 99) {
+            return -1;
+        }
+        
+        if (enemyAttack < 1 || enemyAttack > 99) {
+            return -1;
+        }
+        
+        if (enemyAttack > playerDefense) {
+            double enemyDamageDealt = enemyAttack - playerDefense;
+            return enemyDamageDealt;
+        }
+        else {
+            return 0;
+        }
+    }
 }
