@@ -16,6 +16,7 @@ import byui.cit260.dungeonTester.model.Player;
 import byui.cit260.dungeonTester.model.RegularScene;
 import byui.cit260.dungeonTester.model.StairScene;
 import byui.cit260.dungeonTester.model.TrapScene;
+import byui.cit260.dungeonTester.view.StartProgramView;
 
 /**
  *
@@ -120,6 +121,9 @@ public class DungeonTester {
         
         String MonsterSceneInfo = monsterScene.toString();
         System.out.println(MonsterSceneInfo);
+        
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.startProgram();
     }
     
     
