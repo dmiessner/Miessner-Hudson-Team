@@ -14,8 +14,18 @@ import java.util.Scanner;
 public class StartProgramView {
 
     public void startProgram() {
+        // Display the banner
         this.displayBanner();
+        
+        // Prompt the player for their name
         String playersName = this.getPlayersName();
+        
+        // create and save the player object
+        
+        // Display a personalized welcome message
+        
+        
+        // Display main menu
 
     }
 //Display the banner screen

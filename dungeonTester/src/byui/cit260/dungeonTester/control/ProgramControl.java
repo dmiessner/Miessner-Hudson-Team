@@ -5,6 +5,8 @@
  */
 package byui.cit260.dungeonTester.control;
 
+import byui.cit260.dungeonTester.model.Player;
+
 
 
 /**
