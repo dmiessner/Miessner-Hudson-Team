@@ -5,6 +5,8 @@
  */
 package byui.cit260.dungeonTester.view;
 
+import byui.cit260.dungeonTester.control.ProgramControl;
+import byui.cit260.dungeonTester.model.Player;
 import java.util.Scanner;
 
 /**
@@ -14,8 +16,18 @@ import java.util.Scanner;
 public class StartProgramView {
 
     public void startProgram() {
-        this.displayBanner();
-        String playersName = this.getPlayersName();
+        
+    //Display Banner
+    this.displayBanner();
+        
+    //Get Player Name
+    String playersName = this.getPlayersName();
+        
+    //Create Player object
+    Player player = ProgramControl.createPlayer(playersName);
+    
+    //Display Personalized Welcome Message
+    this.displayWelcomeMessage(player);
 
     }
 //Display the banner screen
@@ -75,4 +87,13 @@ public class StartProgramView {
         return playersName; // return the name
 
     }
+
+    private void displayWelcomeMessage(Player player) {
+        System.out.println("\n\n===============================================");
+        System.out.println("\tWelcome to our dungeon " +player.getName());
+        System.out.println("\tWe hope you enjoy your stay.");
+        System.out.println("===============================================");
+    }                          
+    
+
 }
