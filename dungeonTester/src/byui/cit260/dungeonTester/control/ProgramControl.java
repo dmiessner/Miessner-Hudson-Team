@@ -6,6 +6,7 @@
 package byui.cit260.dungeonTester.control;
 
 import byui.cit260.dungeonTester.model.Player;
+import dungeontester.DungeonTester;
 
 
 
@@ -16,9 +17,18 @@ import byui.cit260.dungeonTester.model.Player;
 public class ProgramControl {
     
     //Create Player
-    public static Player createPlayer(String playersName) {
-        System.out.println("\n**** createPlayer function called ****");
-        return null;
+    public static Player createPlayer(String name) {
+        
+        if (name == null) {
+            return null;
+        }
+        
+        Player player = new Player();
+        player.setName(name);
+        
+        DungeonTester.setPlayer(player);
+        
+        return player;
     }
     
 }
