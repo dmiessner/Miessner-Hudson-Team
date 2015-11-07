@@ -11,25 +11,24 @@ import java.util.Scanner;
  *
  * @author meezl
  */
-public class HelpMenuView {
-
+public class SaveMenuView {
+    
     private final String MENU = "\n"
             + "\n==============================================="
-            + "\n| Help Menu                                  |"
+            + "\n| Save Menu                                   |"
             + "\n==============================================="
-            + "\nP - Purpose of game"
-            + "\nI - How to interact"
-            + "\nC - How combat works"
-            + "\nB - Opens backpack"
+            + "\nS - Save Game"
+            + "\nO - Open a different save"
+            + "\nC - Close Game"
             + "\nE - Exit"
             + "\n===============================================";
-
-    void displayMenu() {
+    
+    public void displayMenu() {
 
         char selection = ' ';
         do {
 
-            System.out.println(MENU); // Displays the main menu
+            System.out.println(MENU); // Displays save menu
 
             String input = this.getInput(); // Get the user's input
             selection = input.charAt(0); // Get the first character of the string
@@ -54,7 +53,7 @@ public class HelpMenuView {
 
             // if the players name is less than 2 characters in length then this happens
             if (input.length() > 1) {
-                System.out.println("Invalid input - the input must be P, I, C, or E, and only one character");
+                System.out.println("Invalid input - the input must be G, H, S, or E, and only one character");
                 continue;
             }
             break; // exit the repetition
@@ -63,42 +62,34 @@ public class HelpMenuView {
     }
 
     private void doAction(char selection) {
-        switch (selection) {
-            case 'P': // :Learn the purpose of the game
-                this.learnPurpose();
+         switch (selection) {
+            case 'S': // Saves running game
+                this.saveGame();
                 break;
-            case 'I': // leran to interact
-                this.learnToInteract();
+            case 'O': // Opens an existing save
+                this.openSave();
                 break;
-            case 'C': // Learn combat
-                this.learnCombat();
-            case 'B': // Open backpack
-                this.openBackpack();
+            case 'C': // Closes the game
+                this.closeSave();
                 break;
-            case 'E': // Return to previous menu
-                return;
+            case 'E': // exit to previous menu
+                    return;
             default:
                 System.out.println("\n*** Invalid selection, try again ***");
                 break;
+    }
+    
+}
 
-        }
-
+    private void closeSave() {
+        System.out.println("*** Called close save function ***");
     }
 
-    private void learnPurpose() {
-        System.out.println("*** The purpose of this game is to climb stair cases to reach the end of the dungeon, and not die while doing so. ***");
+    private void openSave() {
+        System.out.println("*** Called open save function ***");
     }
 
-    private void learnToInteract() {
-        System.out.println("*** Interacting with your room causes you to search for keys, a stairwell, treasure, or monsters. ***");
-    }
-
-    private void learnCombat() {
-        System.out.println("*** Combat is simple.  Your defense vs their attack, and vice versa.  Who ever hits 0 health first dies. ***");
-    }
-
-    private void openBackpack() {
-        BackpackView backpackView = new BackpackView();
-        backpackView.displayMenu();
+    private void saveGame() {
+        System.out.println("*** Called save game function ***");
     }
 }

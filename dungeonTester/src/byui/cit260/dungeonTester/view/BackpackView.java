@@ -11,21 +11,19 @@ import java.util.Scanner;
  *
  * @author meezl
  */
-public class HelpMenuView {
+public class BackpackView {
 
     private final String MENU = "\n"
             + "\n==============================================="
-            + "\n| Help Menu                                  |"
+            + "\n| Backpack                                   |"
             + "\n==============================================="
-            + "\nP - Purpose of game"
-            + "\nI - How to interact"
-            + "\nC - How combat works"
-            + "\nB - Opens backpack"
+            + "\nI - View items"
+            + "\nU - Use items"
+            + "\nW - Wear items"
             + "\nE - Exit"
             + "\n===============================================";
 
     void displayMenu() {
-
         char selection = ' ';
         do {
 
@@ -54,7 +52,7 @@ public class HelpMenuView {
 
             // if the players name is less than 2 characters in length then this happens
             if (input.length() > 1) {
-                System.out.println("Invalid input - the input must be P, I, C, or E, and only one character");
+                System.out.println("Invalid input - the input must be G, H, S, or E, and only one character");
                 continue;
             }
             break; // exit the repetition
@@ -64,41 +62,33 @@ public class HelpMenuView {
 
     private void doAction(char selection) {
         switch (selection) {
-            case 'P': // :Learn the purpose of the game
-                this.learnPurpose();
+            case 'I': // Create a new game
+                this.viewItems();
                 break;
-            case 'I': // leran to interact
-                this.learnToInteract();
+            case 'U': // get and start an existing game
+                this.useItems();
                 break;
-            case 'C': // Learn combat
-                this.learnCombat();
-            case 'B': // Open backpack
-                this.openBackpack();
+            case 'W': // display the help menu
+                this.wearItems();
                 break;
-            case 'E': // Return to previous menu
+            case 'E': // exit the program
                 return;
             default:
                 System.out.println("\n*** Invalid selection, try again ***");
                 break;
-
         }
 
     }
 
-    private void learnPurpose() {
-        System.out.println("*** The purpose of this game is to climb stair cases to reach the end of the dungeon, and not die while doing so. ***");
+    private void wearItems() {
+        System.out.println("*** Wear items fucntion called ***");
     }
 
-    private void learnToInteract() {
-        System.out.println("*** Interacting with your room causes you to search for keys, a stairwell, treasure, or monsters. ***");
+    private void useItems() {
+        System.out.println("*** Use items function called ***");
     }
 
-    private void learnCombat() {
-        System.out.println("*** Combat is simple.  Your defense vs their attack, and vice versa.  Who ever hits 0 health first dies. ***");
-    }
-
-    private void openBackpack() {
-        BackpackView backpackView = new BackpackView();
-        backpackView.displayMenu();
+    private void viewItems() {
+        System.out.println("*** View items function called ***");
     }
 }
