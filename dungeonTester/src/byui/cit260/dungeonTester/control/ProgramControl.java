@@ -31,4 +31,17 @@ public class ProgramControl {
         return player;
     }
     
+    public static Answer readAnswer(String answer) {
+        
+        if (answer == null){
+            return null;
+        }
+        
+        Answer answer = new Answer();
+        answer.getAnswer(answer);
+        
+        return answer;
+        
+    }
+    
 }

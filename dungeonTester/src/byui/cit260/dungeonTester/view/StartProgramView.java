@@ -21,10 +21,10 @@ public class StartProgramView {
     this.displayBanner();
         
     //Get Player Name
-    String playersName = this.getPlayersName();
+    String playersName = this.getPlayersName(); //get input
         
     //Create Player object
-    Player player = ProgramControl.createPlayer(playersName);
+    Player player = ProgramControl.createPlayer(playersName); //
     
     //Display Personalized Welcome Message
     this.displayWelcomeMessage(player);
