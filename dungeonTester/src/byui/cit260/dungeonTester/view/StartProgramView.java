@@ -29,8 +29,33 @@ public class StartProgramView {
     //Display Personalized Welcome Message
     this.displayWelcomeMessage(player);
 
+        // Display the banner
+        this.displayBanner();
+
+        // Prompt the player for their name
+        String playersName = this.getPlayersName();
+
+        //Display Banner
+        this.displayBanner();
+
+    //Get Player Name
+        //Create Player object
+        Player player = ProgramControl.createPlayer(playersName);
+
+        //Display Personalized Welcome Message
+        this.displayWelcomeMessage(player);
+
+        // Display Banner
+        this.displayBanner();
+
+        // Create Player object
+        // Display Personalized Welcome Message
+        this.displayWelcomeMessage(player);
+
+        // Display the main menu
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.displayMenu();
     }
-//Display the banner screen
 
     private void displayBanner() {
         System.out.println("\n\n***********************************************");
@@ -90,10 +115,9 @@ public class StartProgramView {
 
     private void displayWelcomeMessage(Player player) {
         System.out.println("\n\n===============================================");
-        System.out.println("\tWelcome to our dungeon " +player.getName());
+
+        System.out.println("\tWelcome to our dungeon " + player.getName());
         System.out.println("\tWe hope you enjoy your stay.");
         System.out.println("===============================================");
-    }                          
-    
-
+    }
 }

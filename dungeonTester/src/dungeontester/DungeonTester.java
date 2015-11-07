@@ -5,17 +5,8 @@
  */
 package dungeontester;
 
-import byui.cit260.dungeonTester.model.Actors;
-import byui.cit260.dungeonTester.model.Backpack;
 import byui.cit260.dungeonTester.model.Game;
-import byui.cit260.dungeonTester.model.Inventory;
-import byui.cit260.dungeonTester.model.Locations;
-import byui.cit260.dungeonTester.model.Map;
-import byui.cit260.dungeonTester.model.MonsterScene;
 import byui.cit260.dungeonTester.model.Player;
-import byui.cit260.dungeonTester.model.RegularScene;
-import byui.cit260.dungeonTester.model.StairScene;
-import byui.cit260.dungeonTester.model.TrapScene;
 import byui.cit260.dungeonTester.view.StartProgramView;
 
 /**
@@ -42,11 +33,14 @@ public class DungeonTester {
         DungeonTester.player = player;
     }
     private static Player player = null;
+
+
     
     
     /**
      * @param args the command line arguments
      */
+
     public static void main(String[] args) {
         
         
@@ -147,11 +141,7 @@ public class DungeonTester {
         
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.startProgram();
-        
-        
+
     }
-    
-    
+
 }
-
-
