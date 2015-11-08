@@ -12,18 +12,17 @@ import byui.cit260.dungeonTester.control.MapControl;
  * @author Mitchell
  */
 public class gameplayMenuView {
-    
-    public void gameplayMenu(){
-        
+
+    public void gameplayMenu() {
+
         //display banner
         this.displayBanner();
-        
-        
+
     }
 
     private void displayBanner() {
         System.out.println("\n\n***********************************************");
-        
+
         System.out.println("*                                             *"
                 + "\n* What would you like to do now?              *"
                 + "\n*                                             *"
@@ -38,9 +37,9 @@ public class gameplayMenuView {
                 + "\n*                                             *"
                 + "\n***********************************************");
     }
-    
+
     public void doAction(char choice) {
-        
+
         switch (choice) {
             case 'M': //Display map
                 MapControl.mapDisplay();
@@ -69,9 +68,8 @@ public class gameplayMenuView {
             default:
                 System.out.println("\n*Invalid Input, try again.                    *");
                 break;
-                
+
         }
     }
-    
-    
+
 }

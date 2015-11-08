@@ -12,7 +12,8 @@ import java.util.Objects;
  *
  * @author Mitchell
  */
-public class Question implements Serializable{
+public class Question implements Serializable {
+
     private String question;
     private String answer;
 
@@ -67,6 +68,5 @@ public class Question implements Serializable{
         }
         return true;
     }
-    
-    
+
 }

@@ -12,12 +12,10 @@ import byui.cit260.dungeonTester.model.Question;
  * @author Mitchell
  */
 public class QuestionControl {
-    
-    public static int checkAnswer(Question question, String playerAnswer){
-        
-    
-        
+
+    public static int checkAnswer(Question question, String playerAnswer) {
+
         return 0;
-    } 
-    
+    }
+
 }

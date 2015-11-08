@@ -42,7 +42,5 @@ public class MapControl {
     public static void openBackpack() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
-    
+
 }

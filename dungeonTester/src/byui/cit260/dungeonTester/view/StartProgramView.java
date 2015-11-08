@@ -16,18 +16,18 @@ import java.util.Scanner;
 public class StartProgramView {
 
     public void startProgram() {
-        
-    //Display Banner
-    this.displayBanner();
-        
-    //Get Player Name
-    String playersName = this.getPlayersName(); //get input
-        
-    //Create Player object
-    Player player = ProgramControl.createPlayer(playersName); //
-    
-    //Display Personalized Welcome Message
-    this.displayWelcomeMessage(player);
+
+        //Display Banner
+        this.displayBanner();
+
+        //Get Player Name
+        String playersName = this.getPlayersName(); //get input
+
+        //Create Player object
+        Player player = ProgramControl.createPlayer(playersName); //
+
+        //Display Personalized Welcome Message
+        this.displayWelcomeMessage(player);
 
         // Display the banner
         this.displayBanner();
@@ -38,7 +38,7 @@ public class StartProgramView {
         //Display Banner
         this.displayBanner();
 
-    //Get Player Name
+        //Get Player Name
         //Create Player object
         Player player = ProgramControl.createPlayer(playersName);
 
