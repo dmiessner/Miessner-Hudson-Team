@@ -33,14 +33,14 @@ public class StartProgramView {
         this.displayBanner();
 
         // Prompt the player for their name
-        String playersName = this.getPlayersName();
+        
 
         //Display Banner
         this.displayBanner();
 
         //Get Player Name
         //Create Player object
-        Player player = ProgramControl.createPlayer(playersName);
+        player = ProgramControl.createPlayer(playersName);
 
         //Display Personalized Welcome Message
         this.displayWelcomeMessage(player);
@@ -54,7 +54,7 @@ public class StartProgramView {
 
         // Display the main menu
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMenu();
+        mainMenu.display();
     }
 
     private void displayBanner() {
