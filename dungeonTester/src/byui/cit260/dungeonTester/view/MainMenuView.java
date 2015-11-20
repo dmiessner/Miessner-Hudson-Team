@@ -6,6 +6,7 @@
 package byui.cit260.dungeonTester.view;
 
 import byui.cit260.dungeonTester.control.GameControl;
+import byui.cit260.dungeonTester.model.Player;
 import dungeontester.DungeonTester;
 
 /**
@@ -86,4 +87,10 @@ public class MainMenuView extends View {
         saveMenu.displayMenu();
     }
 
+}
+
+public class GameControl {
+    public static void createNewGame(Player player) {
+        System.out.println("*** createNewGame in control called ***");
+    }
 }

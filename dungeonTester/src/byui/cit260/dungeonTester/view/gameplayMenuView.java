@@ -6,27 +6,19 @@
 package byui.cit260.dungeonTester.view;
 
 import byui.cit260.dungeonTester.control.MapControl;
+import java.util.Scanner;
 
 /**
  *
  * @author Mitchell
  */
 public class gameplayMenuView {
-
-    public void gameplayMenu() {
-
-        //display banner
-        this.displayBanner();
-
-    }
-
-    private void displayBanner() {
-        System.out.println("\n\n***********************************************");
-
-        System.out.println("*                                             *"
+    
+            String promptMessage = ("***********************************************"
+                + "\n*                                             *"
                 + "\n* What would you like to do now?              *"
                 + "\n*                                             *"
-                + "\n*  M  - Map:Display map                       *"
+                + "\n*  M  - Display map                           *"
                 + "\n*  F  - Move Forward                          *"
                 + "\n*  B  - Move Backward                         *"
                 + "\n*  R  - Move Right                            *"
@@ -36,9 +28,52 @@ public class gameplayMenuView {
                 + "\n*  P  - Opens Backpack Menu                   *"
                 + "\n*                                             *"
                 + "\n***********************************************");
-    }
 
-    public void doAction(char choice) {
+    public void gameplayMenu() {
+
+        char selection = ' ';
+        do{
+            
+            //Display the Game Menu
+            //System.out.println(gameMenu);
+            
+            //Get User selection
+            String input = this.getInput();
+            //get first character of string
+            selection = input.charAt(0);
+            
+            // do action from selection
+            this.doAction(selection);
+            
+        } while (selection != 'E'); //e = exit
+
+    }
+    
+    public String getInput() {
+        
+        Scanner keyboard = new Scanner(System.in);
+        boolean valid = false;
+        String selection = null;
+        
+        //While a valid name is not retrived
+        while(!valid) {
+            
+            //Get value entered from keyboard
+            selection = keyboard.nextLine();
+            selection = selection.trim();
+            
+            if (selection.length() < 1) {
+                System.out.println("\n*** Invalid Option, try again.***");
+                continue;
+            }
+            
+            break;
+        }
+        
+        return selection; //return name
+    }
+    
+        public void doAction(char choice) {
 
         switch (choice) {
             case 'M': //Display map
@@ -66,10 +101,12 @@ public class gameplayMenuView {
                 MapControl.openBackpack();
                 break;
             default:
-                System.out.println("\n*Invalid Input, try again.                    *");
+                System.out.println("\n***Invalid Input, try again.***");
                 break;
 
         }
+
     }
 
-}
+
+    }
