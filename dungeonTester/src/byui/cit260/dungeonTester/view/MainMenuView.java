@@ -1,4 +1,4 @@
- /*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -6,6 +6,10 @@
 package byui.cit260.dungeonTester.view;
 
 import byui.cit260.dungeonTester.control.GameControl;
+import byui.cit260.dungeonTester.control.MapControl;
+import byui.cit260.dungeonTester.model.Game;
+import byui.cit260.dungeonTester.model.Inventory;
+import byui.cit260.dungeonTester.model.Map;
 import byui.cit260.dungeonTester.model.Player;
 import dungeontester.DungeonTester;
 
@@ -35,12 +39,12 @@ public class MainMenuView extends View {
      */
     @Override
     public boolean doAction(Object input) {
-        
+
         String value = (String) input;
-        
+
         value = value.toUpperCase();
         char choice = value.charAt(0);
-        
+
         switch (choice) {
             case 'N': // Create a new game
                 this.startNewGame();
@@ -85,12 +89,5 @@ public class MainMenuView extends View {
     private void saveGame() {
         SaveMenuView saveMenu = new SaveMenuView();
         saveMenu.displayMenu();
-    }
-
-}
-
-public class GameControl {
-    public static void createNewGame(Player player) {
-        System.out.println("*** createNewGame in control called ***");
     }
 }

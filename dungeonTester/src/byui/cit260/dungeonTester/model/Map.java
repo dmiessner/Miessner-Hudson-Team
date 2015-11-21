@@ -16,8 +16,37 @@ public class Map implements Serializable{
     // Class instance variables
     private int numRows;
     private int numColumns;
+    private Location[][] locations;
 
     public Map() {
+    }
+
+    public Map(int numRows, int numColumns) {
+        if (numRows < 1 || numColumns < 1) {
+            System.out.println("The number of rows and columns must be greater than zero.");
+            return;
+        }
+        
+        this.numRows = numRows;
+        this.numColumns = numColumns;
+        
+        this.locations = new Location[numRows][numColumns];
+        
+        for (int row = 0; row < numRows; row++) {
+            for (int column = 0; column < numColumns; column++) {
+                Location location = new Location();
+                location.setColumn(column);
+                location.setRow(row);
+                location.setVisited(false);
+                
+                locations[row][column] = location;
+            }
+        }
+        
+    }
+    
+    public Map(int i, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 

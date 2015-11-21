@@ -10,22 +10,21 @@ package byui.cit260.dungeonTester.control;
  * @author meezl
  */
 public class BackpackControl {
+
     public double packWeight(double packWeight, double carrySkill, double speedStat, double speedBattle) {
-        
-        if (packWeight < 0 || carrySkill <=0){
+
+        if (packWeight < 0 || carrySkill <= 0) {
             return -1;
         }
-        
-        if (packWeight - carrySkill <= 0){
-        
+
+        if (packWeight - carrySkill <= 0) {
+
             return speedBattle = speedStat * 1;
         }
-        
-        if (packWeight - carrySkill > 0){
-            return speedBattle = (carrySkill / packWeight) * speedStat; 
-        }
-    
-        else{
+
+        if (packWeight - carrySkill > 0) {
+            return speedBattle = (carrySkill / packWeight) * speedStat;
+        } else {
             return -1;
         }
     }

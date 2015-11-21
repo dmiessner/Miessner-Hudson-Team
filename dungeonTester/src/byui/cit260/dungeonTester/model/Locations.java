@@ -6,7 +6,9 @@
 package byui.cit260.dungeonTester.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
+import javafx.scene.Scene;
 
 /**
  *
@@ -19,7 +21,8 @@ public class Locations implements Serializable{
     private String column;
     private String visited;
     private String staircase;
-
+    private Scene scene;
+    private ArrayList<Actor> actors;
     public Locations() {
     }
 
