@@ -9,7 +9,7 @@ package byui.cit260.dungeonTester.model;
  *
  * @author Meez
  */
-class InventoryItem {
+public class InventoryItem {
     
     public enum Item {
         potion,

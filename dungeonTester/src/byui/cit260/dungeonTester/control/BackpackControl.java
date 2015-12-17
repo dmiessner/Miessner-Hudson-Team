@@ -5,11 +5,17 @@
  */
 package byui.cit260.dungeonTester.control;
 
+import byui.cit260.dungeonTester.model.InventoryItem;
+
 /**
  *
  * @author meezl
  */
 public class BackpackControl {
+    
+    public double totalPackWeight(){
+        
+    }
 
     public double packWeight(double packWeight, double carrySkill, double speedStat, double speedBattle) {
 
